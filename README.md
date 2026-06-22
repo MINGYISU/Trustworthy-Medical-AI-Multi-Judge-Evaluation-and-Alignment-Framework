@@ -15,7 +15,10 @@ The framework supports automated evaluation using multiple LLM-based judges and 
 
 ## How to run
 
-1. Configure your API keys in '.env' file, and install dependencies with `pip install -r requirements.txt`.
+1. - Configure your API keys in '.env' file
+    - install dependencies with `pip install -r requirements.txt`.
+    - Python 3.10+ is required.
+    - Nvidia GPU is needed for fine-tuning or running generators locally, but not required. The evaluation framework can run with all API-based models as generators and judges, without needing to run any model locally.
 
 2. Specifiy your desired generators, judges and evaluation criterias.
 
