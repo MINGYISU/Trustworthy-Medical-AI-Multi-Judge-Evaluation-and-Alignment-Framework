@@ -1,6 +1,18 @@
-# Trustworthy-Medical-AI-Notetaker
+# Trustworthy Medical AI: Multi-Judge Evaluation and Alignment Framework
+
+## Central Idea
+
+This project investigates how reliable supervision signals can be constructed for real-world AI tasks where ground-truth answers are unavailable. Instead of relying on a single model or evaluator, the framework uses multiple generator models to produce diverse candidate solutions and multiple specialized judge models to independently assess their quality. Through cross-model evaluation, agreement analysis, and ranking, the system identifies the most reliable candidate responses and evaluators. While consensus does not guarantee the discovery of a true gold answer, it provides a practical mechanism for approximating high-quality supervision in domains where objective ground truth is difficult or impossible to obtain.
+
+## A specific example
+
+We will use medical note generation as a concreate example. The goal is to ask a LLM to generate medical note summaries from a patient-docotor conversations, with strict rules and guidelines applied, controlling what and how the LLM should generate the outputs. 
+
+## Background
 
 Medical note generation systems are increasingly used to convert patient-provider conversations into structured clinical documentation. However, these systems introduce safety risks including hallucinated medical information, omission of critical patient details, and formatting inconsistencies that may impact downstream clinical workflows.
+
+## Evaluation System Details
 
 This project presents an evaluation framework for assessing the reliability and safety of AI medical note generators. The framework focuses on three key dimensions:
 
